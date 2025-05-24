@@ -1,20 +1,21 @@
 <x-guest-layout>
     <!-- Main Hero Content -->
-    <div class="container max-w-lg px-4 py-32 mx-auto text-left bg-center bg-no-repeat bg-cover md:max-w-none md:text-center"
-        style="background-image: url('images/MasBro.jpg')">
+    <div class="w-full min-h-screen flex flex-col justify-center items-center text-center bg-center bg-no-repeat bg-cover"
+        style="background-image: url('images/p.jpg')">
         <h1
-            class="font-mono text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 md:text-center sm:leading-none lg:text-5xl">
+            class="font-mono text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 sm:leading-none lg:text-5xl">
             <span class="inline md:block">SELAMAT DATANG DI RESTO & CAFE MAS BRO</span>
         </h1>
-        <div class="mx-auto mt-2 text-green-50 md:text-center lg:text-lg">
+        <div class="mt-2 text-green-50 lg:text-lg">
             “Nikmati cita rasa khas di Resto & Cafe Mas Bro, tempat makan favorit dengan pelayanan ramah dan harga bersahabat.”
-        </div>
-        <div class="flex flex-col items-center mt-12 text-center">
+        </div>  
+        <div class="flex flex-col items-center mt-12">
             <span class="relative inline-flex w-full md:w-auto">
                 <a href="{{ route('reservations.step-one') }}" type="button"
                     class="inline-flex items-center justify-center px-6 py-2 text-base font-bold leading-6 text-white bg-green-600 rounded-full lg:w-full md:w-auto hover:bg-green-500 focus:outline-none">
                     Reservasi Sekarang
                 </a>
+            </span>
         </div>
     </div>
     <!-- End Main Hero Content -->
@@ -26,19 +27,17 @@
                         <!-- <h1
               class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl"
             > -->
-                        <h3 class="text-xl">Sejarah mas br
-                        </h3>
-                        <h2 class="text-4xl text-green-600">Welcome</h2>
+                        <!-- <h3 class="text-xl">Sejarah
+                        </h3> -->
+                        <h2 class="text-4xl text-green-600">About</h2>
                         <!-- </h1> -->
                         <p class="mx-auto text-base text-gray-500 sm:max-w-md lg:text-xl md:max-w-3xl">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus nemo incidunt
-                            praesentium, ipsum
-                            culpa minus eveniet, id nesciunt excepturi sit voluptate repudiandae. Explicabo, incidunt
-                            quia.
-                            Repellendus mollitia quaerat est voluptas!
+                            Resto & Cafe Mas Bro berdiri sejak 2015 di Jl. Semanggi Raya, Palaraya, Tegal. 
+                            Kami hadir untuk menyuguhkan pengalaman kuliner khas dengan suasana hangat dan pelayanan ramah. 
+                            Dengan menu lezat yang terus berkembang, Mas Bro menjadi tempat favorit untuk bersantai, berkumpul, dan menikmati momen istimewa bersama keluarga dan teman.
                         </p>
                         <div class="relative flex">
-                            <a href="#_"
+                            <a href="{{ route('about') }}" type="button"
                                 class="flex items-center w-full px-6 py-3 mb-3 text-lg text-white bg-green-600 rounded-md sm:mb-0 hover:bg-green-700 sm:w-auto">
                                 Read More
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-1" viewBox="0 0 24 24"
@@ -53,64 +52,82 @@
                 </div>
                 <div class="w-full md:w-1/2">
                     <div class="w-full h-auto overflow-hidden rounded-md shadow-xl sm:rounded-xl">
-                        <img src="{{ asset('images/people-2576336_960_720.jpg') }}" />
+                        <img src="{{ asset('images/p.jpg') }}" />
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="py-20 bg-gray-50">
-        <div class="container items-center max-w-6xl px-4 px-10 mx-auto sm:px-20 md:px-32 lg:px-16">
-            <div class="flex flex-wrap items-center -mx-3">
-                <div class="order-1 w-full px-3 lg:w-1/2 lg:order-0">
-                    <div class="w-full lg:max-w-md">
-                        <h2 class="mb-4 text-2xl font-bold">About Us</h2>
-                        <h2
-                            class="mb-4 text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
-                            WHY CHOOSE US?</h2>
+    <section class="py-12 bg-white">
+  <!-- Judul -->
+  <div class="text-center mb-10">
+    <h2 class="text-3xl font-bold text-black">Layanan</h2>
+    <div class="w-16 h-1 bg-yellow-500 mx-auto mt-2 rounded-full"></div>
+  </div>
 
-                        <p class="mb-4 font-medium tracking-tight text-gray-400 xl:mb-6">Lorem ipsum dolor sit amet
-                            consectetur
-                            adipisicing elit. Natus hic atque magni minus aliquam, eos quam incidunt nam iusto sunt
-                            voluptates
-                            inventore a veritatis doloremque corrupti. Veritatis est expedita cupiditate!</p>
-                        <ul>
-                            <li class="flex items-center py-2 space-x-4 xl:py-3">
-                                <svg class="w-8 h-8 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z">
-                                    </path>
-                                </svg>
-                                <span class="font-medium text-gray-500">Faster Processing and Delivery</span>
-                            </li>
-                            <li class="flex items-center py-2 space-x-4 xl:py-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-gray-500" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                                <span class="font-medium text-gray-500">Easy Payments</span>
-                            </li>
-                            <li class="flex items-center py-2 space-x-4 xl:py-3">
-                                <svg class="w-8 h-8 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
-                                    </path>
-                                </svg>
-                                <span class="font-medium text-gray-500">100% Protection and Security for Your App</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="w-full px-3 mb-12 lg:w-1/2 order-0 lg:order-1 lg:mb-0"><img
-                        class="mx-auto sm:max-w-sm lg:max-w-full"
-                        src="{{ asset('images/Free Vector _ People sitting at the cafe.jpeg')}}"
-                        alt="feature image"></div>
-            </div>
-        </div>
-    </section>
+  <!-- Card Layanan -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 md:px-16">
+  <!-- Dine-In -->
+<div class="border border-blue-400 p-6 text-center">
+  <img
+    src="https://img.icons8.com/fluency/96/restaurant-table.png"
+    alt="Dine-In"
+    class="h-24 mx-auto mb-4"
+  />
+  <h3 class="text-xl font-bold mb-2">Dine-In</h3>
+  <p class="text-sm text-gray-700">
+    Dengan suasana hangat dan ramah yang terinspirasi oleh budaya dan seni Indonesia, Anda akan merasa seolah-olah sedang berdansa dengan rasa di seluruh Nusantara.
+  </p>
+</div>
+
+<!-- Take Away -->
+<div class="border border-blue-400 p-6 text-center">
+  <img
+    src="https://img.icons8.com/fluency/96/take-away-food.png"
+    alt="Take Away"
+    class="h-24 mx-auto mb-4"
+  />
+  <h3 class="text-xl font-bold mb-2">Take Away</h3>
+  <p class="text-sm text-gray-700">
+    Pesan makanan favorit Anda dan ambil sendiri dengan mudah tanpa harus menunggu lama.
+  </p>
+</div>
+
+  <!-- Reservation -->
+  <div class="border border-blue-400 p-6 text-center">
+    <img
+      src="https://img.icons8.com/color/96/reservation.png"
+      alt="Reservation"
+      class="h-24 mx-auto mb-4"
+    />
+    <h3 class="text-xl font-bold mb-2">Reservation</h3>
+    <p class="text-sm text-gray-700">
+      Pesan tempat lebih awal untuk menikmati suasana terbaik dan layanan maksimal dari kami.
+    </p>
+  </div>
+</div>
+
+
+</section>
+
+<!-- Section Kuning -->
+<section class="bg-yellow-400 py-12 px-4">
+  <div class="flex flex-col md:flex-row items-center justify-around gap-4 text-center md:text-center w-full px-6 md:px-32">
+    <div class="md:w-2/3 text-left">
+      <h2 class="text-2xl font-bold text-black mb-2">
+        Ayo Makan Dan Nongkrong Di Resto & Cafe Mas Bro!
+      </h2>
+      <p class="text-sm text-black">
+        Nikmati pengalaman kuliner yang penuh cita rasa, tempat nyaman, dan layanan terbaik untuk semua suasana — dari santai sampai kumpul bareng.
+      </p>
+    </div>
+    <div class="md:w-auto">
+      <a href="{{ route('reservations.step-one') }}" class="px-6 py-2 bg-black text-white font-semibold rounded-full hover:bg-gray-900 transition whitespace-nowrap">
+        Reservation
+      </a>
+    </div>
+  </div>
+</section>
     @if(is_array($specials))
         <section class="mt-8 bg-white">
             <div class="mt-4 text-center">
@@ -137,63 +154,98 @@
         </section>
     @endif        
     <section class="pt-4 pb-12 bg-gray-800">
-        <div class="my-16 text-center">
-            <h2 class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
-                Testimonial </h2>
-            <p class="text-xl text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. soluta sapient</p>
-        </div>
-        <div class="grid gap-2 lg:grid-cols-3">
-            <div class="max-w-md p-4 bg-white rounded-lg shadow-lg">
-                <div class="flex justify-center -mt-16 md:justify-end">
-                    <img class="object-cover w-20 h-20 border-2 border-green-500 rounded-full"
-                        src="{{ asset('images/Casual businessman at office.jpeg') }}">
-                </div>
-                <div>
-                    <h2 class="text-3xl font-semibold text-gray-800">Food</h2>
-                    <p class="mt-2 text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae dolores
-                        deserunt
-                        ea doloremque natus error, rerum quas odio quaerat nam ex commodi hic, suscipit in a veritatis
-                        pariatur
-                        minus consequuntur!</p>
-                </div>
-                <div class="flex justify-end mt-4">
-                    <a href="#" class="text-xl font-medium text-green-500">John Doe</a>
-                </div>
-            </div>
-            <div class="max-w-md p-4 bg-white rounded-lg shadow-lg">
-                <div class="flex justify-center -mt-16 md:justify-end">
-                    <img class="object-cover w-20 h-20 border-2 border-green-500 rounded-full"
-                        src="{{ asset('images/young-3061652__340.jpg') }}">
-                </div>
-                <div>
-                    <h2 class="text-3xl font-semibold text-gray-800">Food</h2>
-                    <p class="mt-2 text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae dolores
-                        deserunt
-                        ea doloremque natus error, rerum quas odio quaerat nam ex commodi hic, suscipit in a veritatis
-                        pariatur
-                        minus consequuntur!</p>
-                </div>
-                <div class="flex justify-end mt-4">
-                    <a href="#" class="text-xl font-medium text-green-500">John Doe</a>
-                </div>
-            </div>
-            <div class="max-w-md p-4 bg-white rounded-lg shadow-lg">
-                <div class="flex justify-center -mt-16 md:justify-end">
-                    <img class="object-cover w-20 h-20 border-2 border-green-500 rounded-full"
-                        src="{{ asset('images/purchase-3090818__340.jpg') }}">
-                </div>
-                <div>
-                    <h2 class="text-3xl font-semibold text-gray-800">Food</h2>
-                    <p class="mt-2 text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae dolores
-                        deserunt
-                        ea doloremque natus error, rerum quas odio quaerat nam ex commodi hic, suscipit in a veritatis
-                        pariatur
-                        minus consequuntur!</p>
-                </div>
-                <div class="flex justify-end mt-4">
-                    <a href="#" class="text-xl font-medium text-green-500">John Doe</a>
-                </div>
+    <div class="my-16 text-center">
+        <h2 class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 mb-6">
+            Menu Favorit
+        </h2>
+    </div>
+
+    <section class="px-6 lg:px-16">
+ 
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4">
+        <!-- Card 1 -->
+        <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between">
+            <img class="w-full h-40 object-cover rounded-md mb-3" src="{{ asset('images/makanan-tradisional.jpg') }}" alt="Makanan Tradisional">
+            <h2 class="text-xl font-semibold text-gray-800">Makanan Tradisional</h2>
+            <p class="text-gray-600 text-sm mt-1">Pilihan makanan tradisional khas Indonesia yang menggugah selera.</p>
+            <div class="flex justify-between items-center mt-3">
+                <span class="font-semibold text-gray-800">Mulai 15.000</span>
             </div>
         </div>
-    </section>
+
+        <!-- Card 2 -->
+        <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between">
+            <img class="w-full h-40 object-cover rounded-md mb-3" src="{{ asset('images/minuman-segar.jpg') }}" alt="Minuman Segar">
+            <h2 class="text-xl font-semibold text-gray-800">Minuman Segar</h2>
+            <p class="text-gray-600 text-sm mt-1">Minuman dingin menyegarkan dengan berbagai pilihan rasa buah.</p>
+            <div class="flex justify-between items-center mt-3">
+                <span class="font-semibold text-gray-800">Mulai 10.000</span>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between">
+            <img class="w-full h-40 object-cover rounded-md mb-3" src="{{ asset('images/suasana-nyaman.jpg') }}" alt="Suasana Nyaman">
+            <h2 class="text-xl font-semibold text-gray-800">Suasana Nyaman</h2>
+            <p class="text-gray-600 text-sm mt-1">Lingkungan yang tenang dan nyaman, ideal untuk bersantai atau bekerja.</p>
+            <div class="flex justify-between items-center mt-3">
+                <span class="font-semibold text-gray-800">Gratis</span>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between">
+            <img class="w-full h-40 object-cover rounded-md mb-3" src="{{ asset('images/pelayanan-ramah.jpg') }}" alt="Pelayanan Ramah">
+            <h2 class="text-xl font-semibold text-gray-800">Pelayanan Ramah</h2>
+            <p class="text-gray-600 text-sm mt-1">Staf kami siap melayani dengan senyum dan keramahan setiap saat.</p>
+            <div class="flex justify-between items-center mt-3">
+                <span class="font-semibold text-gray-800">Termasuk</span>
+            </div>
+        </div>
+
+
+        <!-- Card 1 -->
+        <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between">
+            <img class="w-full h-40 object-cover rounded-md mb-3" src="{{ asset('images/makanan-tradisional.jpg') }}" alt="Makanan Tradisional">
+            <h2 class="text-xl font-semibold text-gray-800">Makanan Tradisional</h2>
+            <p class="text-gray-600 text-sm mt-1">Pilihan makanan tradisional khas Indonesia yang menggugah selera.</p>
+            <div class="flex justify-between items-center mt-3">
+                <span class="font-semibold text-gray-800">Mulai 15.000</span>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between">
+            <img class="w-full h-40 object-cover rounded-md mb-3" src="{{ asset('images/minuman-segar.jpg') }}" alt="Minuman Segar">
+            <h2 class="text-xl font-semibold text-gray-800">Minuman Segar</h2>
+            <p class="text-gray-600 text-sm mt-1">Minuman dingin menyegarkan dengan berbagai pilihan rasa buah.</p>
+            <div class="flex justify-between items-center mt-3">
+                <span class="font-semibold text-gray-800">Mulai 10.000</span>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between">
+            <img class="w-full h-40 object-cover rounded-md mb-3" src="{{ asset('images/suasana-nyaman.jpg') }}" alt="Suasana Nyaman">
+            <h2 class="text-xl font-semibold text-gray-800">Suasana Nyaman</h2>
+            <p class="text-gray-600 text-sm mt-1">Lingkungan yang tenang dan nyaman, ideal untuk bersantai atau bekerja.</p>
+            <div class="flex justify-between items-center mt-3">
+                <span class="font-semibold text-gray-800">Gratis</span>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between">
+            <img class="w-full h-40 object-cover rounded-md mb-3" src="{{ asset('images/pelayanan-ramah.jpg') }}" alt="Pelayanan Ramah">
+            <h2 class="text-xl font-semibold text-gray-800">Pelayanan Ramah</h2>
+            <p class="text-gray-600 text-sm mt-1">Staf kami siap melayani dengan senyum dan keramahan setiap saat.</p>
+            <div class="flex justify-between items-center mt-3">
+                <span class="font-semibold text-gray-800">Termasuk</span>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4">
+    </div>
+</section>
 </x-guest-layout>
