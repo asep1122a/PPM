@@ -17,44 +17,62 @@
 </head>
 
 <body>
-    <div class="bg-white shadow-md" x-data="{ isOpen: false }">
-        <nav class="container px-6 py-8 mx-auto md:flex md:justify-between md:items-center">
-            <div class="flex items-center justify-between">
-                <a class="text-xl font-bold text-red-600 md:text-2xl hover:text-yellow-400 transition-colors duration-200"
-                    href="/">
-                    Resto & Cafe Mas Bro
-                </a>
-                <!-- Mobile menu button -->
-                <div @click="isOpen = !isOpen" class="flex md:hidden">
-                    <button type="button"
-                        class="text-gray-800 hover:text-gray-400 focus:outline-none focus:text-gray-400"
-                        aria-label="toggle menu">
-                        <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
-                            <path fill-rule="evenodd"
-                                d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z">
-                            </path>
-                        </svg>
-                    </button>
-                </div>
+<div class="bg-white shadow-md" x-data="{ isOpen: false }">
+    <nav class="container px-6 py-8 mx-auto md:flex md:justify-between md:items-center">
+        <div class="flex items-center justify-between">
+            <a class="text-xl font-bold text-red-600 md:text-2xl hover:text-yellow-400 transition-colors duration-200"
+                href="/">
+                Resto & Cafe Mas Bro
+            </a>
+            <!-- Mobile menu button -->
+            <div @click="isOpen = !isOpen" class="flex md:hidden">
+                <button type="button"
+                    class="text-gray-800 hover:text-gray-400 focus:outline-none focus:text-gray-400"
+                    aria-label="toggle menu">
+                    <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
+                        <path fill-rule="evenodd"
+                            d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z">
+                        </path>
+                    </svg>
+                </button>
             </div>
+        </div>
 
-            <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
-            <div :class="isOpen ? 'flex' : 'hidden'"
-                class="flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0">
-                <a class="text-xl font-bold text-red-600 md:text-2xl hover:text-yellow-400 transition-colors duration-200"
-                    href="/">Home</a>
-                <a class="text-xl font-bold text-red-600 md:text-2xl hover:text-yellow-400 transition-colors duration-200"
-                    href="/about">About</a>
-                <!-- <a class="text-xl font-bold text-red-600 md:text-2xl hover:text-yellow-400 transition-colors duration-200"
-                    href="{{ route('categories.index') }}">Categories</a> -->
-                <a class="text-xl font-bold text-red-600 md:text-2xl hover:text-yellow-400 transition-colors duration-200"
-                    href="{{ route('menus.index') }}">Our Menu</a>
-                <a class="text-xl font-bold text-red-600 md:text-2xl hover:text-yellow-400 transition-colors duration-200"
-                    href="{{ route('reservations.step-one') }}">Make Reservation</a>
+        <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
 
-            </div>
-        </nav>
-    </div>
+<div :class="isOpen ? 'flex' : 'hidden'"
+    class="flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0">
+    <a href="/"
+        class="relative group text-xl font-bold text-red-600 md:text-2xl {{ request()->is('/') ? 'text-yellow-400' : 'hover:text-yellow-400' }} transition-colors duration-200">
+        Beranda
+        <span class="absolute left-0 -bottom-1 h-1 rounded-full bg-yellow-400 transition-all duration-300
+            {{ request()->is('/') ? 'w-full' : 'w-0' }}">
+        </span>
+    </a>
+    <a href="/about"
+        class="relative group text-xl font-bold text-red-600 md:text-2xl {{ request()->is('about') ? 'text-yellow-400' : 'hover:text-yellow-400' }} transition-colors duration-200">
+        Tentang Kami
+        <span class="absolute left-0 -bottom-1 h-1 rounded-full bg-yellow-400 transition-all duration-300
+            {{ request()->is('about') ? 'w-full' : 'w-0' }}">
+        </span>
+    </a>
+    <a href="{{ route('menus.index') }}"
+        class="relative group text-xl font-bold text-red-600 md:text-2xl {{ request()->is('menus*') ? 'text-yellow-400' : 'hover:text-yellow-400' }} transition-colors duration-200">
+        Menu
+        <span class="absolute left-0 -bottom-1 h-1 rounded-full bg-yellow-400 transition-all duration-300
+            {{ request()->is('menus*') ? 'w-full' : 'w-0' }}">
+        </span>
+    </a>
+    <a href="{{ route('reservations.step-one') }}"
+        class="relative group text-xl font-bold text-red-600 md:text-2xl {{ request()->is('reservations*') ? 'text-yellow-400' : 'hover:text-yellow-400' }} transition-colors duration-200">
+        Reservasi
+        <span class="absolute left-0 -bottom-1 h-1 rounded-full bg-yellow-400 transition-all duration-300
+            {{ request()->is('reservations*') ? 'w-full' : 'w-0' }}">
+        </span>
+    </a>
+</div>
+    </nav>
+</div>
     <div class="font-sans text-gray-900 antialiased min-h-screen">
         {{ $slot }}
     </div>
